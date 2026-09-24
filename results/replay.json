@@ -1,0 +1,43 @@
+{
+  "recorded_with": "controlled",
+  "traces": 400,
+  "tool_calls_recorded": 2999,
+  "replays": {
+    "single pass": {
+      "identical_trace": 62,
+      "same_decision": 81,
+      "different_decision": 157,
+      "diverged_from_recording": 162
+    },
+    "retry everything": {
+      "identical_trace": 68,
+      "same_decision": 197,
+      "different_decision": 116,
+      "diverged_from_recording": 87
+    },
+    "controlled": {
+      "identical_trace": 400,
+      "same_decision": 400,
+      "different_decision": 0,
+      "diverged_from_recording": 0
+    },
+    "controlled, naive retries": {
+      "identical_trace": 93,
+      "same_decision": 345,
+      "different_decision": 0,
+      "diverged_from_recording": 55
+    },
+    "controlled, no staleness check": {
+      "identical_trace": 332,
+      "same_decision": 336,
+      "different_decision": 0,
+      "diverged_from_recording": 64
+    },
+    "controlled, no evidence gate": {
+      "identical_trace": 235,
+      "same_decision": 235,
+      "different_decision": 165,
+      "diverged_from_recording": 0
+    }
+  }
+}

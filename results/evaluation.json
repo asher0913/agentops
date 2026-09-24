@@ -1,0 +1,101 @@
+{
+  "setup": {
+    "incidents": 1200,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "fault_rate": 0.2,
+    "alert_is_the_root_pct": 40.33,
+    "mean_hops_from_alert_to_root": 0.97,
+    "root_evidence_missing_pct": 10.25,
+    "misleading_signal_on_a_victim_pct": 36.08
+  },
+  "policies": {
+    "single pass": {
+      "incidents": 1200,
+      "correct_pct": 37.75,
+      "wrong_pct": 62.25,
+      "escalated_pct": 0.0,
+      "wrong_blamed_a_victim_pct": 45.33,
+      "escalations_with_root_evidence_missing_pct": 0.0,
+      "escalations_naming_the_root_pct": 0.0,
+      "escalations_whose_suspected_cause_was_right_pct": 0.0,
+      "tool_calls_mean": 3.0,
+      "failed_calls_mean": 0.7,
+      "seconds_to_decision_mean": 0.74,
+      "seconds_to_decision_p95": 2.42
+    },
+    "retry everything": {
+      "incidents": 1200,
+      "correct_pct": 66.5,
+      "wrong_pct": 33.5,
+      "escalated_pct": 0.0,
+      "wrong_blamed_a_victim_pct": 31.75,
+      "escalations_with_root_evidence_missing_pct": 0.0,
+      "escalations_naming_the_root_pct": 0.0,
+      "escalations_whose_suspected_cause_was_right_pct": 0.0,
+      "tool_calls_mean": 6.62,
+      "failed_calls_mean": 2.49,
+      "seconds_to_decision_mean": 1.39,
+      "seconds_to_decision_p95": 4.03
+    },
+    "controlled": {
+      "incidents": 1200,
+      "correct_pct": 86.0,
+      "wrong_pct": 0.42,
+      "escalated_pct": 13.58,
+      "wrong_blamed_a_victim_pct": 0.42,
+      "escalations_with_root_evidence_missing_pct": 75.46,
+      "escalations_naming_the_root_pct": 93.87,
+      "escalations_whose_suspected_cause_was_right_pct": 90.18,
+      "tool_calls_mean": 7.78,
+      "failed_calls_mean": 1.72,
+      "seconds_to_decision_mean": 2.62,
+      "seconds_to_decision_p95": 6.62
+    },
+    "controlled, naive retries": {
+      "incidents": 1200,
+      "correct_pct": 66.17,
+      "wrong_pct": 0.08,
+      "escalated_pct": 33.75,
+      "wrong_blamed_a_victim_pct": 0.08,
+      "escalations_with_root_evidence_missing_pct": 30.37,
+      "escalations_naming_the_root_pct": 86.17,
+      "escalations_whose_suspected_cause_was_right_pct": 80.74,
+      "tool_calls_mean": 9.05,
+      "failed_calls_mean": 3.42,
+      "seconds_to_decision_mean": 1.85,
+      "seconds_to_decision_p95": 4.87
+    },
+    "controlled, no staleness check": {
+      "incidents": 1200,
+      "correct_pct": 78.75,
+      "wrong_pct": 0.33,
+      "escalated_pct": 20.92,
+      "wrong_blamed_a_victim_pct": 0.33,
+      "escalations_with_root_evidence_missing_pct": 49.0,
+      "escalations_naming_the_root_pct": 95.22,
+      "escalations_whose_suspected_cause_was_right_pct": 91.24,
+      "tool_calls_mean": 7.54,
+      "failed_calls_mean": 1.66,
+      "seconds_to_decision_mean": 2.55,
+      "seconds_to_decision_p95": 6.53
+    },
+    "controlled, no evidence gate": {
+      "incidents": 1200,
+      "correct_pct": 65.08,
+      "wrong_pct": 34.92,
+      "escalated_pct": 0.0,
+      "wrong_blamed_a_victim_pct": 34.5,
+      "escalations_with_root_evidence_missing_pct": 0.0,
+      "escalations_naming_the_root_pct": 0.0,
+      "escalations_whose_suspected_cause_was_right_pct": 0.0,
+      "tool_calls_mean": 5.69,
+      "failed_calls_mean": 1.27,
+      "seconds_to_decision_mean": 1.93,
+      "seconds_to_decision_p95": 5.38
+    }
+  }
+}
